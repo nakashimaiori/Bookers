@@ -1,6 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
 
-
-<h1>Editing Book</h1>
+<h2>Editing Book</h2>
 <!-- form_for部分 -->
 <%= form_for(@book) do |f| %>
 	<% if @book.errors.any? %>
@@ -14,15 +17,18 @@
        </div>
 <% end %>
 
-  <h6>Title</h6>
+  <h5>Title</h5>
   <%= f.text_field :title %>
-  <h6>Body</h6>
+  <h5>Body</h5>
   <%= f.text_area :body %><br>
-  <%= f.submit 'Update Book' %>
+  <%= f.submit '  Update Book  ' %>
 <% end %>
 
 <ul>
-	<li><p><%= link_to "show",book_path(@book) %></p></li>
+	<li><%= link_to "show",book_path(@book) %></li>
 	<li>|</li>
 	<li><%= link_to "back",books_path %></li>
 </ul>
+
+</body>
+</html>

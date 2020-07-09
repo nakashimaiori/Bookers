@@ -18,8 +18,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+.notice {
+  color: pink;
+}
 body {
   margin: 33px;
+  font-size: 13px;
+  line-height: 18px;
+  color: #333;
+  background-color: #fff;
 }
 
 h1 {
@@ -54,7 +61,12 @@ ul li{
   display: inline-block;
   color: #333;
 }
-
-
-
+h2 {
+  margin: 8px;
+  font-weight: bold;
+  font-size: 2em;
+}
+h5 {
+  margin: 3px;
+}
 
