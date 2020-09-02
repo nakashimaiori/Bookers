@@ -12,11 +12,13 @@
 	<tr>
 		<th>Title</th>
 		<th>Body</th>
+    <th>Genre</th>
 	</tr>
 <% @books.each do |book| %>
 <tr>
 <td><%= book.title %></td>
 <td><%= book.body %></td>
+<td><%= book.genre.name %></td>
 <td><%= link_to "Show",book_path(book) %></td>
 <td><%= link_to "Edit",edit_book_path(book) %></td>
 <td><%= link_to "Destroy", destroy_book_path(book.id), method: :delete, "data-confirm" => "Are you sure？" %></td>
@@ -46,8 +48,8 @@
 
   <h5>Body</h5>
   <%= f.text_area :body %>
- <br>
-  <%= f.submit 'Create Book' %>
+  
+  <h5>Genre</h5>
+  <%= collection_select(:genre, :name, @genres, :id, :name) %>
+  <%= f.submit 'Create' %>
 <% end %>
-
-
